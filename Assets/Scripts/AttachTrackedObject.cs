@@ -1,15 +1,14 @@
-using System;
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.XR.ARFoundation;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class AttachTrackedObject : MonoBehaviour
 {
     private ARTrackedImageManager _trackedImagesManager;
-    private readonly Dictionary<string, GameObject> _instantiatedPrefabs = new();
+    private GameObject _trackedObject;
+    private Transform _trackedImageTransform;
 
-    [SerializeField] private GameObject[] ARPrefabs;
+    [SerializeField] private GameObject _prefab;
 
     private void Awake()
     {
@@ -26,31 +25,36 @@ public class AttachTrackedObject : MonoBehaviour
         _trackedImagesManager.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
+    private void Update()
+    {
+        MoveTrackedObjectIfItExists();
+    }
+
     private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
-    { 
-        foreach(var trackedImage in eventArgs.added)
+    {
+        if (eventArgs.added.Count == 0) return;
+
+        var trackedImage = eventArgs.added[^1];
+        var imageName = trackedImage.referenceImage.name;
+
+        _trackedImageTransform = trackedImage.transform;
+
+        ScreenLogger.Instance.Trace($"Tracker \"{imageName}\"!");
+
+        if (_trackedObject == null)
         {
-            var imageName = trackedImage.referenceImage.name;
-
-            foreach(var prefab in ARPrefabs)
-            {
-                if(string.Compare(prefab.name, imageName, StringComparison.OrdinalIgnoreCase) == 0
-                    && !_instantiatedPrefabs.ContainsKey(imageName))
-                {
-                    var newPrefab = Instantiate(prefab, trackedImage.transform);
-
-                    _instantiatedPrefabs.Add(imageName, newPrefab);
-                }
-            }
+            _trackedObject = Instantiate(_prefab,
+                _trackedImageTransform.position, Quaternion.identity);
         }
 
-        foreach (var trackedImage in eventArgs.removed) 
-        {
-            var imageName = trackedImage.referenceImage.name;
+    }
 
-            Destroy(_instantiatedPrefabs[imageName]);
+    private void MoveTrackedObjectIfItExists()
+    {
+        if (_trackedObject == null) return;
 
-            _instantiatedPrefabs.Remove(imageName);
-        }
+        _trackedObject.transform.SetPositionAndRotation(
+                    _trackedImageTransform.position,
+                    _trackedImageTransform.rotation);
     }
 }
