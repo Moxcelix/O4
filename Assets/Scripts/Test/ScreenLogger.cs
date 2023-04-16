@@ -14,6 +14,8 @@ public class ScreenLogger : MonoBehaviour
 
     public void Trace(string text) 
     {
+        if (text == null) return;
+
         _text.text += $"{text} \n";
     }
 }
