@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7388753038202179316}
-  - component: {fileID: 1331624588}
+  - component: {fileID: 5415097404345790250}
   m_Layer: 0
   m_Name: TestPrefab
   m_TagString: Untagged
@@ -67,7 +67,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1331624588
+--- !u!114 &5415097404345790250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76,19 +76,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4879221895715880689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d57cc38b9e907e4b8699000afbf6aed, type: 3}
+  m_Script: {fileID: 11500000, guid: 47ea126a5ae6e994098bd3801f77c3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stateCharacterPairs:
-  - character: {fileID: 5758462520555266345, guid: d286af9a4f580754a9e6654f7186511d,
-      type: 3}
-    state: 1
-  - character: {fileID: 5758462520555266345, guid: d286af9a4f580754a9e6654f7186511d,
-      type: 3}
-    state: 0
-  - character: {fileID: 7178879093349256541, guid: 89ef52a965985d241bd2fb5fdd507fc5,
-      type: 3}
-    state: 3
   _spawnPoint: {fileID: 99206399}
 --- !u!1001 &511253237798848197
 PrefabInstance:
