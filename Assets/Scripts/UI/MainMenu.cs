@@ -14,4 +14,9 @@ public class MainMenu : MonoBehaviour
         GlobalSpace.SetSceneState(sceneState);
         SceneManager.LoadScene(_mainSceneIndex);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

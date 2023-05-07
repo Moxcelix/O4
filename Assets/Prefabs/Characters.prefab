@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4672706250827539479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4672706250827539465}
+  - component: {fileID: 4672706250827539478}
+  m_Layer: 0
+  m_Name: Characters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4672706250827539465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672706250827539479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03980795, y: -0.01547266, z: 0.0012854487}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4672706250827539478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672706250827539479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d57cc38b9e907e4b8699000afbf6aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterDatas:
+  - character: {fileID: 764063370969882796, guid: b07e6eb3df3c2b74eabc45cc70510c76,
+      type: 3}
+    text: {fileID: 4900000, guid: 29387183d2bb20746ac2afc045f5c8a5, type: 3}
+    state: 1
+  - character: {fileID: 5758462520555266345, guid: d286af9a4f580754a9e6654f7186511d,
+      type: 3}
+    text: {fileID: 4900000, guid: 17c3ad8917419d34fa10469b7e2fd2e0, type: 3}
+    state: 2
+  - character: {fileID: 7178879093349256541, guid: 89ef52a965985d241bd2fb5fdd507fc5,
+      type: 3}
+    text: {fileID: 4900000, guid: c5029f0295c0c1b43aaf56c2a252fc49, type: 3}
+    state: 3
+  - character: {fileID: 7178879093349256541, guid: 89ef52a965985d241bd2fb5fdd507fc5,
+      type: 3}
+    text: {fileID: 4900000, guid: ee88515ca4c081a48a4f56f69863fb1f, type: 3}
+    state: 4
+  - character: {fileID: 7178879093349256541, guid: 89ef52a965985d241bd2fb5fdd507fc5,
+      type: 3}
+    text: {fileID: 4900000, guid: 0f3e747f44c69b8478cea2ef775b2c10, type: 3}
+    state: 2

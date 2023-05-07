@@ -3,33 +3,24 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
     [System.Serializable]
-    public struct StateCharacterPair
+    public class CharacteData
     {
         [SerializeField] public GameObject character;
+        [SerializeField] public TextAsset text;
         [SerializeField] public SceneState state;
     }
 
-    [SerializeField] private StateCharacterPair[] _stateCharacterPairs;
-    [SerializeField] private Transform _spawnPoint;
-
-    private void OnEnable()
+    [SerializeField] private CharacteData[] _characterDatas;
+    public CharacteData GetCharacterData(SceneState sceneState)
     {
-        foreach (var pair in _stateCharacterPairs)
+        foreach (var data in _characterDatas)
         {
-            if(pair.state == GlobalSpace.CurrentSceneState)
+            if (data.state == sceneState)
             {
-                AttachCharacter(pair.character);
-
-                break;
+                return data;
             }
         }
-    }
 
-    private void AttachCharacter(GameObject character) 
-    {
-        var characterInstance = Instantiate(character);
-        characterInstance.transform.parent = transform;
-        characterInstance.transform.localPosition = Vector3.zero;
-        characterInstance.transform.localEulerAngles = Vector3.zero;
+        return null;
     }
 }
