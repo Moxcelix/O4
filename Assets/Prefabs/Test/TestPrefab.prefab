@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 99206399}
+  _testCube: {fileID: 5396011729237398147}
 --- !u!1001 &511253237798848197
 PrefabInstance:
   m_ObjectHideFlags: 0

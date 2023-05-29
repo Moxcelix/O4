@@ -53,7 +53,7 @@ MonoBehaviour:
       type: 3}
     text: {fileID: 4900000, guid: 17c3ad8917419d34fa10469b7e2fd2e0, type: 3}
     state: 2
-  - character: {fileID: 7178879093349256541, guid: 89ef52a965985d241bd2fb5fdd507fc5,
+  - character: {fileID: 4583642129304032711, guid: 46bf1a13354f52340ad994e60edff457,
       type: 3}
     text: {fileID: 4900000, guid: c5029f0295c0c1b43aaf56c2a252fc49, type: 3}
     state: 3
@@ -61,7 +61,7 @@ MonoBehaviour:
       type: 3}
     text: {fileID: 4900000, guid: ee88515ca4c081a48a4f56f69863fb1f, type: 3}
     state: 4
-  - character: {fileID: 7178879093349256541, guid: 89ef52a965985d241bd2fb5fdd507fc5,
+  - character: {fileID: 944581781554057334, guid: ed58a484b3ff25341bf8f3952c7b4b16,
       type: 3}
     text: {fileID: 4900000, guid: 0f3e747f44c69b8478cea2ef775b2c10, type: 3}
-    state: 2
+    state: 5
